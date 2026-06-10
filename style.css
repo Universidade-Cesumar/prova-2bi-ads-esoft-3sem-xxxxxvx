@@ -66,24 +66,58 @@ label {
 }
 
 .btn-primary {
-  background-color: #385657;
+  background-color: #0f766e;
   border: none;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 28px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  font-weight: 600;
+  margin-top: 8px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .btn-primary:hover {
-  background-color: #385657;
+  background-color: #0c5d56;
+  transform: translateY(-1px);
 }
 
 table {
   margin-top: 10px;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
+.table-dark {
+  --bs-table-bg: transparent;
+  color: #2d3748;
+}
+
+.table-dark thead {
+  background-color: #0f766e;
+  color: white;
+}
+
+.table-dark thead th {
+  border: none;
+  font-weight: 600;
+  padding: 12px 16px;
+}
+
+.table-dark tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #edf2f7;
+  color: #2d3748;
+  background-color: #ffffff;
+}
+
+.table-dark tbody tr:nth-of-type(odd) td {
+  background-color: #f7fafc;
+}
