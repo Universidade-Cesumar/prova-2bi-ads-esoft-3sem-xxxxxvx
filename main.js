@@ -47,3 +47,41 @@ const listarMateriais = async () => {
 
 document.addEventListener('DOMContentLoaded', listarMateriais);
 
+const cadastrarMaterial = async () => {
+    const nome = document.getElementById('input-nome').value.trim();
+    const quantidade = document.getElementById('input-quantidade').value.trim();
+    const unidade = document.getElementById('input-unidade').value.trim();
+    const observacoes = document.getElementById('input-observacoes').value.trim();
+
+    if (nome === '' || quantidade === '') {
+        alert('Preencha o nome e a quantidade do material!');
+        return;
+    }
+
+    const novoMaterial = {
+        nome: nome,
+        quantidade: Number(quantidade),
+        unidade: unidade,
+        observacoes: observacoes,
+        dataCadastro: dataAtual()
+    };
+
+    try {
+        await fetch(URL_MATERIAIS, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(novoMaterial)
+        });
+
+        limparFormulario();
+        listarMateriais();
+
+    } catch (erro) {
+        console.error('Erro ao cadastrar material:', erro);
+        alert('Não foi possível cadastrar o material.');
+    }
+}
+
+document.getElementById('btn-cadastrar').addEventListener('click', cadastrarMaterial);
