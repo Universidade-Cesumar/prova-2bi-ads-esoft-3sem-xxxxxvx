@@ -16,3 +16,34 @@ const limparFormulario = () => {
     document.getElementById('input-unidade').value = '';
     document.getElementById('input-observacoes').value = '';
 }
+
+const listarMateriais = async () => {
+    try {
+        const resposta = await fetch(URL_MATERIAIS);
+        const materiais = await resposta.json();
+
+        const tabela = document.getElementById('lista-materiais');
+        tabela.innerHTML = '';
+
+        materiais.forEach((material) => {
+            const linha = document.createElement('tr');
+
+            linha.innerHTML = `
+                <td>${material.nome}</td>
+                <td>${material.quantidade}</td>
+                <td>${material.unidade ?? '-'}</td>
+                <td>${material.dataCadastro ?? '-'}</td>
+                <td>${material.observacoes ?? '-'}</td>
+            `;
+
+            tabela.appendChild(linha);
+        });
+
+    } catch (erro) {
+        console.error('Erro ao carregar materiais:', erro);
+        alert('Não foi possível carregar a lista de materiais.');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', listarMateriais);
+
