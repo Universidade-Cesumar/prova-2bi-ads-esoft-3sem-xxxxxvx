@@ -43,7 +43,38 @@ const configurarBotoes = () => {
             }
         });
     });
-}
+
+    document.querySelectorAll('.btn-baixar').forEach((botao) => {
+        botao.addEventListener('click', async (evento) => {
+            const id = evento.target.dataset.id;
+            const estoqueAtual = Number(evento.target.dataset.estoque);
+            const linha = evento.target.closest('tr');
+            const inputRetirada = linha.querySelector('.input-retirada');
+            const quantidadeRetirada = Number(inputRetirada.value);
+
+            if (!validarRetirada(estoqueAtual, quantidadeRetirada)) {
+                alert('Quantidade inválida para baixa.');
+                return;
+            }
+
+            const novaQuantidade = estoqueAtual - quantidadeRetirada;
+
+            try {
+                await fetch(`${URL_MATERIAIS}/${id}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ quantidade: novaQuantidade })
+                });
+
+                listarMateriais();
+
+            } catch (erro) {
+                console.error('Erro ao realizar baixa:', erro);
+                alert('Não foi possível realizar a baixa do material.');
+            }
+        });
+    });
+};
 
 const listarMateriais = async () => {
     try {
@@ -81,8 +112,6 @@ const listarMateriais = async () => {
         alert('Não foi possível carregar a lista de materiais.');
     }
 }
-
-document.addEventListener('DOMContentLoaded', listarMateriais);
 
 const cadastrarMaterial = async () => {
     const nome = document.getElementById('input-nome').value.trim();
