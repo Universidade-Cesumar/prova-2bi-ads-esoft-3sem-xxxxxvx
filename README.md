@@ -1,4 +1,5 @@
 # Sistema de Controle de Almoxarifado
+#### Prova 2BI - 3SEM | Aluna: Ana Giulia Negreli
 
 O almoxarifado do curso técnico de Enfermagem do SENAC Zona Norte é responsável por fornecer seringas, luvas, máscaras e outros materiais usados nas aulas práticas. O controle atual é feito em planilha, o que dificulta a visibilidade do estoque e o registro das baixas diárias feitas pelos professores.
 Para resolver isso, será desenvolvida uma aplicação web que permite cadastrar materiais, visualizar o estoque em tempo real e registrar cada saída com data, quantidade, destino e responsável.
@@ -29,5 +30,3 @@ Para resolver isso, será desenvolvida uma aplicação web que permite cadastrar
 - Baixa de estoque: campo por item para subtrair quantidades com atualização no servidor (PUT)
 - Validação que impede retiradas com valor zero, negativo ou maior que o estoque
 - Exclusão de materiais com confirmação do usuário (DELETE)
-
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/B74p-HKt)
