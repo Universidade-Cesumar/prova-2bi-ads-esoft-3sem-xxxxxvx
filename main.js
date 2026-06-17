@@ -121,4 +121,7 @@ const cadastrarMaterial = async () => {
     }
 }
 
-document.getElementById('btn-cadastrar').addEventListener('click', cadastrarMaterial);
+document.addEventListener('DOMContentLoaded', () => {
+    listarMateriais();
+    document.getElementById('btn-cadastrar').addEventListener('click', cadastrarMaterial);
+});
