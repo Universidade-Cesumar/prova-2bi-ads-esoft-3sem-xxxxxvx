@@ -121,3 +121,36 @@ table {
 .table-dark tbody tr:nth-of-type(odd) td {
   background-color: #f7fafc;
 }
+
+.btn-warning {
+  background-color: #ead954;
+  color: white;
+  margin-right: 6px;
+  border: none;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-warning:hover {
+  background-color: #c2e357;
+}
+
+.btn-danger {
+  background-color: #940c0c;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-danger:hover {
+  background-color: #940303;
+}
