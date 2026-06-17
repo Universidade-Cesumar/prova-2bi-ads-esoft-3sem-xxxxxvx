@@ -12,10 +12,22 @@ Para resolver isso, será desenvolvida uma aplicação web que permite cadastrar
 
 ## Sprints
 
-| Sprint | Objetivo |
-|--------|----------|
-| 1 |  Fazer a base do sistema: interface inicial, formulário de cadastro de materiais e tabela de listagem consumindo a MockAPI (GET e POST). |
-| 2 | ... (Próximas entregas) |
-| 3 | ... (Próximas entregas) |
+| Sprint | Objetivo | Status |
+|--------|----------|--------|
+| 1 | Fazer a base do sistema: interface inicial, formulário de cadastro de materiais e tabela de listagem consumindo a MockAPI (GET e POST). | ✅ Concluído |
+| 2 | Módulo de retirada (baixa de estoque via PUT) e exclusão de materiais (DELETE), com validação de quantidade | ✅ Concluído |
+| 3 | ... (Próximas entregas) | Em breve... |
+
+## Funcionalidades
+
+### Sprint 1
+- Cadastro de novos materiais com nome, quantidade, unidade e observações
+- Listagem de todos os materiais consumindo a API (GET)
+- Registro automático da data de cadastro
+
+### Sprint 2
+- Baixa de estoque: campo por item para subtrair quantidades com atualização no servidor (PUT)
+- Validação que impede retiradas com valor zero, negativo ou maior que o estoque
+- Exclusão de materiais com confirmação do usuário (DELETE)
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/B74p-HKt)
