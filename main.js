@@ -40,6 +40,13 @@ const listarMateriais = async () => {
                 <td>${material.unidade ?? '-'}</td>
                 <td>${material.dataCadastro ?? '-'}</td>
                 <td>${material.observacoes ?? '-'}</td>
+                <td>
+                <input type="number" id="input-retirada" class="form-control input-retirada" placeholder="Qtd" min="1" max="${material.quantidade}">
+                </td>
+                <td>
+                <button class="btn-baixar btn-warning" data-id="${material.id}" data-estoque="${material.quantidade}">Baixar</button>
+                <button class="btn-excluir btn-danger" data-id="${material.id}">Excluir</button>
+                </td>
             `;
 
             tabela.appendChild(linha);
