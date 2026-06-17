@@ -24,6 +24,25 @@ const validarRetirada = (estoqueAtual, quantidadeRetirada) => {
 }
 
 const configurarBotoes = () => {
+    document.querySelectorAll('.btn-excluir').forEach((botao) => {
+        botao.addEventListener('click', async (evento) => {
+            const id = evento.target.dataset.id;
+
+            if (!confirm('Tem certeza que deseja excluir este material?')) return;
+
+            try {
+                await fetch(`${URL_MATERIAIS}/${id}`, {
+                    method: 'DELETE'
+                });
+
+                listarMateriais();
+
+            } catch (erro) {
+                console.error('Erro ao excluir material:', erro);
+                alert('Não foi possível excluir o material.');
+            }
+        });
+    });
 }
 
 const listarMateriais = async () => {
