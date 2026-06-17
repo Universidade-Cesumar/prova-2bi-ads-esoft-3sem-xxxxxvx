@@ -23,6 +23,9 @@ const validarRetirada = (estoqueAtual, quantidadeRetirada) => {
     return true;
 }
 
+const configurarBotoes = () => {
+}
+
 const listarMateriais = async () => {
     try {
         const resposta = await fetch(URL_MATERIAIS);
@@ -51,6 +54,8 @@ const listarMateriais = async () => {
 
             tabela.appendChild(linha);
         });
+
+        configurarBotoes();
 
     } catch (erro) {
         console.error('Erro ao carregar materiais:', erro);
