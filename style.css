@@ -124,7 +124,7 @@ table {
 }
 
 .btn-warning {
-  background-color: #ead954;
+  background-color: hsl(128, 58%, 35%);
   color: white;
   margin-right: 6px;
   border: none;
@@ -137,11 +137,11 @@ table {
 }
 
 .btn-warning:hover {
-  background-color: #c2e357;
+  background-color: hsl(128, 58%, 35%);
 }
 
 .btn-danger {
-  background-color: #940c0c;
+  background-color: #9d2121;
   color: white;
   border: none;
   padding: 6px 14px;
@@ -153,5 +153,5 @@ table {
 }
 
 .btn-danger:hover {
-  background-color: #940303;
+  background-color: #ae1818;
 }
