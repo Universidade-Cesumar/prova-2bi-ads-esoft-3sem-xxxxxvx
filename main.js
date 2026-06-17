@@ -17,6 +17,12 @@ const limparFormulario = () => {
     document.getElementById('input-observacoes').value = '';
 }
 
+const validarRetirada = (estoqueAtual, quantidadeRetirada) => {
+    if (quantidadeRetirada <= 0) return false;
+    if (quantidadeRetirada > estoqueAtual) return false;
+    return true;
+}
+
 const listarMateriais = async () => {
     try {
         const resposta = await fetch(URL_MATERIAIS);
