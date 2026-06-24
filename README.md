@@ -17,7 +17,7 @@ Para resolver isso, será desenvolvida uma aplicação web que permite cadastrar
 |--------|----------|--------|
 | 1 | Fazer a base do sistema: interface inicial, formulário de cadastro de materiais e tabela de listagem consumindo a MockAPI (GET e POST). | ✅ Concluído |
 | 2 | Módulo de retirada (baixa de estoque via PUT) e exclusão de materiais (DELETE), com validação de quantidade | ✅ Concluído |
-| 3 | ... (Próximas entregas) | Em breve... |
+| 3 | Dashboard com total de itens, alerta de estoque crítico, filtro de busca e deploy na nuvem | ✅ Concluído |
 
 ## Funcionalidades
 
@@ -30,3 +30,9 @@ Para resolver isso, será desenvolvida uma aplicação web que permite cadastrar
 - Baixa de estoque: campo por item para subtrair quantidades com atualização no servidor (PUT)
 - Validação que impede retiradas com valor zero, negativo ou maior que o estoque
 - Exclusão de materiais com confirmação do usuário (DELETE)
+
+### Sprint 3
+- Total de itens em estoque exibido em tempo real
+- Alerta visual nas linhas com menos de 10 unidades em estoque
+- Filtro de busca por nome do material
+- Deploy publicado no GitHub Pages
