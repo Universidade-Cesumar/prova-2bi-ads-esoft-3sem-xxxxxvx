@@ -82,6 +82,7 @@ const listarMateriais = async () => {
         const materiais = await resposta.json();
 
         const tabela = document.getElementById('lista-materiais');
+        document.getElementById('total-itens').textContent = materiais.length;
         tabela.innerHTML = '';
 
         materiais.forEach((material) => {
