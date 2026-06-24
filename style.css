@@ -155,3 +155,8 @@ table {
 .btn-danger:hover {
   background-color: #ae1818;
 }
+
+.estoque-critico td {
+  background-color: #fff5f5 !important;
+  color: #c53030;
+}
