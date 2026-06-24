@@ -157,4 +157,18 @@ const cadastrarMaterial = async () => {
 document.addEventListener('DOMContentLoaded', () => {
     listarMateriais();
     document.getElementById('btn-cadastrar').addEventListener('click', cadastrarMaterial);
+    document.getElementById('input-busca').addEventListener('input', (evento) => {
+        const busca = evento.target.value.toLowerCase();
+        const linhas = document.querySelectorAll('#lista-materiais tr');
+
+        linhas.forEach((linha) => {
+            const nome = linha.querySelector('td').textContent.toLowerCase();
+            if (nome.includes(busca)) {
+                linha.style.display = '';
+            } else {
+                linha.style.display = 'none';
+            }
+        });
+    });
 });
+
