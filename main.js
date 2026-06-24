@@ -104,6 +104,9 @@ const listarMateriais = async () => {
             `;
 
             tabela.appendChild(linha);
+            if (material.quantidade < 10) {
+                linha.classList.add('estoque-critico');
+            }
         });
 
         configurarBotoes();
