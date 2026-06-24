@@ -36,3 +36,5 @@ Para resolver isso, será desenvolvida uma aplicação web que permite cadastrar
 - Alerta visual nas linhas com menos de 10 unidades em estoque
 - Filtro de busca por nome do material
 - Deploy publicado no GitHub Pages
+
+🌐 **Acesse o sistema:** [clique aqui](https://universidade-cesumar.github.io/prova-2bi-ads-esoft-3sem-xxxxxvx/)
